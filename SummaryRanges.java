@@ -8,7 +8,7 @@ public class SummaryRanges {
         int begin, end;
         begin = end = nums[0];
         for (int i = 1; i < n; i++){
-            if (nums[i] == end || nums[i] == end + 1){
+            if (nums[i] == end + 1){
                 end = nums[i];
             }else{
                 res.add(format(begin, end));
