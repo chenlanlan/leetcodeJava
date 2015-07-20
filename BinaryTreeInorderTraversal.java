@@ -1,10 +1,10 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -13,7 +13,8 @@ public class Solution {
         inorder(root, res);
         return res;
     }
-    private void inorder(TreeNode root, List<Integer> res){
+
+    private void inorder(TreeNode root, List<Integer> res) {
         if (root == null) return;
         res.add(root.val);
         inorder(root.left, res);
@@ -28,18 +29,18 @@ public class Solution {
         Stack<TreeNode> st = new Stack<TreeNode>();
         HashSet<TreeNode> hs = new HashSet<TreeNode>();
         st.push(root);
-        while (!st.isEmpty()){
+        while (!st.isEmpty()) {
             TreeNode temp = st.pop();
-            if (hs.contains(temp)){
+            if (hs.contains(temp)) {
                 res.add(temp.val);
                 continue;
             }
             hs.add(temp);
-            if (temp.right != null){
+            if (temp.right != null) {
                 st.push(temp.right);
             }
             st.push(temp);
-            if (temp.left != null){
+            if (temp.left != null) {
                 st.push(temp.left);
             }
         }

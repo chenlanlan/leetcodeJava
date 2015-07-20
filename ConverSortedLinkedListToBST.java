@@ -1,11 +1,12 @@
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -19,17 +20,18 @@ public class Solution {
     public TreeNode sortedListToBST(ListNode head) {
         int count = 0;
         ListNode p = head;
-        while (p != null){
+        while (p != null) {
             p = p.next;
             count++;
         }
-        return convert(head, 0, count -1);
+        return convert(head, 0, count - 1);
     }
+
     public TreeNode convert(ListNode head, int left, int right) {
         if (left > right) return null;
         int mid = (left + right) / 2;
         ListNode p = head;
-        for (int i = left; i < mid; i++){
+        for (int i = left; i < mid; i++) {
             p = p.next;
         }
         TreeNode leftTree = convert(head, left, mid - 1);
@@ -38,6 +40,6 @@ public class Solution {
         root.left = leftTree;
         root.right = rightTree;
         return root;
-        
+
     }
 }

@@ -1,10 +1,10 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -23,7 +23,7 @@ public class Solution {
                 queue.add(cur.left);
                 nextLevel++;
             }
-            if(cur.right != null) {
+            if (cur.right != null) {
                 queue.add(cur.right);
                 nextLevel++;
             }
@@ -36,5 +36,5 @@ public class Solution {
         }
         return res;
     }
-    
+
 }
