@@ -1,6 +1,8 @@
 import java.util.*;
+
 public class HappyNumber {
     private HashSet<Integer> set = new HashSet<Integer>();
+
     public boolean isHappy(int n) {
         if (n == 1) return true;
         int newN = 0;
@@ -15,7 +17,8 @@ public class HappyNumber {
             return isHappy(newN);
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         HappyNumber test = new HappyNumber();
         System.out.println(test.isHappy(19));
     }
