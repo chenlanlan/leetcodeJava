@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.lang.Integer;
+
 public class Subsets {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
@@ -9,6 +10,7 @@ public class Subsets {
         dfs(nums, 0, result, results);
         return results;
     }
+
     public void dfs(int[] nums, int index, List<Integer> result, List<List<Integer>> results) {
         results.add(new ArrayList(result));
         for (int i = index; i < nums.length; i++) {
@@ -17,7 +19,8 @@ public class Subsets {
             result.remove(result.size() - 1);
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Subsets test = new Subsets();
         int[] nums = {1, 2, 3};
         System.out.println(test.subsets(nums));

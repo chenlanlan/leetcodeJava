@@ -5,12 +5,12 @@ public class TrappingRainWater {
         int right = height.length - 1;
         int secondHeight = 0;
         int ans = 0;
-        while (left < right){
-            if (height[left] < height[right]){
+        while (left < right) {
+            if (height[left] < height[right]) {
                 secondHeight = Math.max(secondHeight, height[left]);
                 ans = ans + secondHeight - height[left];
                 left++;
-            }else{
+            } else {
                 secondHeight = Math.max(secondHeight, height[right]);
                 ans += secondHeight - height[right];
                 right--;
@@ -18,7 +18,8 @@ public class TrappingRainWater {
         }
         return ans;
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         TrappingRainWater test = new TrappingRainWater();
         int[] height = {2, 1, 0, 3};
         test.trap(height);

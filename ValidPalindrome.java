@@ -9,19 +9,20 @@ public class ValidPalindrome {
                 left++;
                 if (left > right) return true;
             }
-            while (!Character.isAlphabetic(s.charAt(right)) && !Character.isDigit(s.charAt(right))){
+            while (!Character.isAlphabetic(s.charAt(right)) && !Character.isDigit(s.charAt(right))) {
                 right--;
                 if (left > right) return true;
             }
             if (s.charAt(left) != s.charAt(right)) return false;
-            else{
+            else {
                 left++;
                 right--;
             }
         }
         return true;
     }
-    public static void main (String[] args) {
+
+    public static void main(String[] args) {
         ValidPalindrome test = new ValidPalindrome();
         System.out.println(test.isPalindrome("aA"));
     }

@@ -8,28 +8,29 @@ public class ProductOfArrayExceptSelf {
                 if (zeros < 1) {
                     zeros++;
                     continue;
-                }else {
+                } else {
                     return res;
                 }
             }
             product *= nums[i];
         }
         for (int i = 0; i < nums.length; i++) {
-            if (zeros == 1){
+            if (zeros == 1) {
                 if (nums[i] == 0) res[i] = product;
                 else res[i] = 0;
-            }else{
+            } else {
                 res[i] = product / nums[i];
             }
         }
         return res;
     }
+
     public static void main(String[] args) {
         ProductOfArrayExceptSelf test = new ProductOfArrayExceptSelf();
         int[] nums = {0, 2, 0, 4};
         System.out.println(test.productExceptSelf(nums));
     }
-    
+
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];

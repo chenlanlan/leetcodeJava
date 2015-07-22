@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
+
 public class SummaryRanges {
-    public List<String> summaryRanges(int[] nums){
+    public List<String> summaryRanges(int[] nums) {
         List<String> res = new ArrayList<String>();
         int n = nums.length;
         if (n == 0) return res;
         int begin, end;
         begin = end = nums[0];
-        for (int i = 1; i < n; i++){
-            if (nums[i] == end + 1){
+        for (int i = 1; i < n; i++) {
+            if (nums[i] == end + 1) {
                 end = nums[i];
-            }else{
+            } else {
                 res.add(format(begin, end));
                 begin = end = nums[i];
             }
@@ -19,22 +20,24 @@ public class SummaryRanges {
         System.out.println(res);
         return res;
     }
-    public String format(int begin, int end){
+
+    public String format(int begin, int end) {
         StringBuffer s = new StringBuffer();
-        if (begin == end){
+        if (begin == end) {
             s.append(begin);
-        }else{
+        } else {
             s.append(begin);
             s.append("->");
             s.append(end);
         }
         return s.toString();
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         SummaryRanges test = new SummaryRanges();
-        int[] a = {-2147483648,-2147483647,2147483647};
+        int[] a = {-2147483648, -2147483647, 2147483647};
         test.summaryRanges(a);
     }
-        
+
 }
 

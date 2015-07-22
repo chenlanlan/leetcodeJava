@@ -1,10 +1,10 @@
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -14,10 +14,11 @@ public class Solution {
         findPathSum(root, sum, res, temp);
         return res
     }
-    private void findPathSum(TreeNode root, int sum, List<List<Integer>> res, List<Integer> temp){
-        if (root  == null) return;
+
+    private void findPathSum(TreeNode root, int sum, List<List<Integer>> res, List<Integer> temp) {
+        if (root == null) return;
         temp.add(root.val);
-        if (sum == root.val && root.left == null && root.right == null){
+        if (sum == root.val && root.left == null && root.right == null) {
             res.add(new ArrayList<Integer>(temp));
             return;
         }

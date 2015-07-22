@@ -1,9 +1,9 @@
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 public class RemoveDuplicatesFromSortedListII {
@@ -12,18 +12,18 @@ public class RemoveDuplicatesFromSortedListII {
         ListNode newList = new ListNode(0);
         newList.next = head;
         ListNode p = newList, q = head;
-        while (p.next != null){
-            while (q.next != null && q.next.val == p.next.val){
+        while (p.next != null) {
+            while (q.next != null && q.next.val == p.next.val) {
                 q = q.next;
             }
-            if (q == p.next){
+            if (q == p.next) {
                 p = p.next;
                 q = q.next;
-            }else{
+            } else {
                 p.next = q.next;
             }
         }
         return newList.next;
     }
-    
+
 }

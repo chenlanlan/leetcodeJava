@@ -36,8 +36,6 @@ public class ScrambleString {
         String sortedS1 = new String(chars1);
         String sortedS2 = new String(chars2);
         if (s1.length() != s2.length() || !sortedS1.equals(sortedS2)) {
-            System.out.println(s1.length());
-            System.out.println(s2.length());
             return false;
         }
         if (s1.length() < 4) {

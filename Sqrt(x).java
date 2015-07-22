@@ -4,8 +4,9 @@ public class Solution {
         while (abs(ans * ans - x) > 0.0001) {
             ans = (ans + x / ans) / 2;
         }
-        return (int)ans;
+        return (int) ans;
     }
+
     public int mySqrt(int x) {
         int left = 1, right = x;
         while (left < right) {
@@ -16,6 +17,6 @@ public class Solution {
                 right = mid;
             }
         }
-        return (left == x / left)? left : left - 1;
+        return (left == x / left) ? left : left - 1;
     }
 }

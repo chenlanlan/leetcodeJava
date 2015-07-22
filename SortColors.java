@@ -9,7 +9,7 @@ public class Solution {
             if (nums[i] == 0) {
                 sorted[left] = 0;
                 left++;
-            }else if (nums[i] == 2) {
+            } else if (nums[i] == 2) {
                 sorted[right] = 2;
                 right--;
             }
@@ -18,6 +18,7 @@ public class Solution {
             nums[i] = sorted[i];
         }
     }
+
     public void sortColors(int[] nums) {
         int tail0 = 0, head2 = nums.length - 1;
         int cur = 0;
@@ -28,12 +29,12 @@ public class Solution {
                 nums[tail0] = temp;
                 cur++;
                 tail0++;
-            }else if (nums[cur] == 2) {
+            } else if (nums[cur] == 2) {
                 int temp = nums[cur];
                 nums[cur] = nums[head2];
                 nums[head2] = temp;
                 head2--;
-            }else {
+            } else {
                 cur++;
             }
         }
