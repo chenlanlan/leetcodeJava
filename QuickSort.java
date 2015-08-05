@@ -6,9 +6,7 @@ public class QuickSort {
             QuickSort(nums, low, j - 1);
             QuickSort(nums, j + 1, high);
         }
-        if (low == 0 && high == 4){
-            System.out.printf("%d, %d, %d, %d, %d\n", nums[0], nums[1],nums[2], nums[3], nums[4]);
-        }
+        System.out.println(nums[9]);
         return nums;
     }
     public int partition(int[] nums, int low, int high){
@@ -28,8 +26,7 @@ public class QuickSort {
     }
     public static void main(String[] args){
         QuickSort test = new QuickSort();
-        int[] nums = {1, 5, 6, 3, 7};
-        System.out.printf("%d, %d, %d, %d, %d\n", nums[0], nums[1],nums[2], nums[3], nums[4]);
-        test.QuickSort(nums, 0, 4);
+        int[] nums = {1,2,3,4,5,6,8,9,10,7};
+        test.quickSort(nums, 0, 9);
     }
 }
