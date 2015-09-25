@@ -6,6 +6,7 @@ public class Solution {
             sum += num % 10;
             num /= 10;
         }
+        System.out.println("done");
         return addDigits(sum);
     }
 }
